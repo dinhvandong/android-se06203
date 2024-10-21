@@ -7,8 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.btec.fpt.campus_expense_manager.models.Item;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +28,28 @@ public class HomeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
+        // Set LayoutManager for RecyclerView (Linear Layout)
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Initialize item list
+        List<Item> itemList = new ArrayList<>();
+
+        // Add data to the list (image resource + text)
+        itemList.add(new Item(R.drawable.item1, "Item 1"));
+        itemList.add(new Item(R.drawable.item2, "Item 2"));
+        itemList.add(new Item(R.drawable.item3, "Item 3"));
+
+        // Add data to the list (image resource + text)
+        itemList.add(new Item(R.drawable.item4, "Item 4"));
+        itemList.add(new Item(R.drawable.item5, "Item 5"));
+        itemList.add(new Item(R.drawable.item6, "Item 6"));
+
+        // Initialize the adapter and set it to the RecyclerView
+        ItemAdapter itemAdapter = new ItemAdapter(this, itemList);
+        recyclerView.setAdapter(itemAdapter);
     }
 }
