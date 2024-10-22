@@ -52,17 +52,26 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
+                showAlertDialogExample();
 
-                String email = edtEmail.getText().toString();
-                String pwd = edtPassword.getText().toString();
+         //       showCustomToastMessage("Login Fail !!!!");
 
-                if(!email.isEmpty() && !pwd.isEmpty()){
+    //            showMessage("Login successful !!!!");
 
-                    Intent intent = new Intent(getActivity(), HomeActivity.class);
-                    startActivity(intent);
-                }else {
-                    showToastCustom("Email or password is invalid !!!");
-                }
+
+    //            Toast.makeText(getContext(), "Login successful!", Toast.LENGTH_LONG).show();
+
+
+//                String email = edtEmail.getText().toString();
+//                String pwd = edtPassword.getText().toString();
+//
+//                if(!email.isEmpty() && !pwd.isEmpty()){
+//
+//                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+//                    startActivity(intent);
+//                }else {
+//                    showToastCustom("Email or password is invalid !!!");
+//                }
 
 
             }
@@ -90,11 +99,8 @@ public class LoginFragment extends Fragment {
 
     void showToastCustom(String message){
 
-
-
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.custom_toast, view.findViewById(R.id.custom_toast_layout));
-
 // Set the icon
         ImageView icon = layout.findViewById(R.id.toast_icon);
         icon.setImageResource(R.drawable.icon_x);  // Set your desired icon
@@ -111,6 +117,24 @@ public class LoginFragment extends Fragment {
 
     }
 
+
+    private  void showCustomToastMessage(String message)
+    {
+        Toast toast = new Toast(getContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate
+                (R.layout.custom_toast_layout,
+                        view.findViewById(R.id.custom_toast_layout));
+        ImageView icon = layout.findViewById(R.id.icon);
+        icon.setImageResource(R.drawable.insta_icon);  // Set your desired icon
+// Set the text
+        TextView text = layout.findViewById(R.id.tv_content);
+        text.setText(message);
+        toast.setView(layout);
+        toast.show();
+    }
+
     void showMes(String message){
 
         Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
@@ -118,6 +142,10 @@ public class LoginFragment extends Fragment {
     }
 
 
+
+    private  void showMessage(String message){
+        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+    }
 
     private void showAlertDialog() {
         // Create an AlertDialog.Builder instance
@@ -216,6 +244,41 @@ public class LoginFragment extends Fragment {
         transaction.replace(R.id.fragment_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+
+    private void showAlertDialogExample(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+        // Set the title of the dialog
+        builder.setTitle("Alert Dialog Title");
+
+        // Set the message to be displayed
+        builder.setMessage("This is a message to alert the user.");
+
+        // Set a positive button with an onClick listener
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Action to take when the user clicks OK
+                Toast.makeText(getContext(), "You clicked OK", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Set a negative button with an onClick listener
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Action to take when the user clicks Cancel
+                dialog.dismiss();  // Dismiss the dialog
+            }
+        });
+        // Create and show the AlertDialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+
     }
 }
 
