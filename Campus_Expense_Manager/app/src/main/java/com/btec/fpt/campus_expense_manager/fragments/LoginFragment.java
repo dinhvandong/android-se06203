@@ -52,7 +52,7 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                showAlertDialogExample();
+           //     showAlertDialogExample();
 
          //       showCustomToastMessage("Login Fail !!!!");
 
@@ -62,16 +62,16 @@ public class LoginFragment extends Fragment {
     //            Toast.makeText(getContext(), "Login successful!", Toast.LENGTH_LONG).show();
 
 
-//                String email = edtEmail.getText().toString();
-//                String pwd = edtPassword.getText().toString();
-//
-//                if(!email.isEmpty() && !pwd.isEmpty()){
-//
-//                    Intent intent = new Intent(getActivity(), HomeActivity.class);
-//                    startActivity(intent);
-//                }else {
-//                    showToastCustom("Email or password is invalid !!!");
-//                }
+                String email = edtEmail.getText().toString();
+                String pwd = edtPassword.getText().toString();
+
+                if(!email.isEmpty() && !pwd.isEmpty()){
+
+                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+                    startActivity(intent);
+                }else {
+                    showToastCustom("Email or password is invalid !!!");
+                }
 
 
             }

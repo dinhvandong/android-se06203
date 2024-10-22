@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
 
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -94,107 +93,206 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+
+                        android:background="@drawable/shape_border_blue"
+                        android:layout_margin="20dp"
+                        android:id="@+id/category1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp">
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_power"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:layout_below="@id/category1"
+                        android:text="Mua sắm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+
+
 
                 <RelativeLayout
-                    android:background="@drawable/shape_border_blue"
-                    android:layout_margin="20dp"
-                    android:id="@+id/category1"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_power"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
+                    <RelativeLayout
+                        android:background="@drawable/shape_border_green"
+
+                        android:layout_margin="20dp"
+                        android:id="@+id/category2"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp">
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_power"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_centerHorizontal="true"
+
+
+                        android:layout_below="@id/category2"
+                        android:text="Tiền trả ngân hàng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:background="@drawable/shape_border_grey"
+
+                        android:layout_margin="20dp"
+                        android:id="@+id/category3"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp">
+
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_power"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_below="@id/category3"
+                        android:text="Tiền lương"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
                 </RelativeLayout>
 
 
 
                 <RelativeLayout
-                    android:background="@drawable/shape_border_green"
-
-                    android:layout_margin="20dp"
-                    android:id="@+id/category2"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp">
-
-                    <ImageView
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_power"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
-
-                </RelativeLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
 
-                <RelativeLayout
-                    android:background="@drawable/shape_border_grey"
+                    <RelativeLayout
+                        android:background="@drawable/shape_border_orange"
 
-                    android:layout_margin="20dp"
-                    android:id="@+id/category3"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp">
+                        android:layout_margin="20dp"
+                        android:id="@+id/category4"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp">
 
-                    <ImageView
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_power"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:background="@drawable/shape_border_orange"
-
-                    android:layout_margin="20dp"
-                    android:id="@+id/category4"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp">
-
-                    <ImageView
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_power"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
-
-                </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_power"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
 
 
-                <RelativeLayout
-                    android:background="@drawable/shape_border_pink"
+                    </RelativeLayout>
 
-                    android:layout_margin="20dp"
-                    android:id="@+id/category5"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp">
+                    <TextView
+                        android:layout_centerHorizontal="true"
 
-                    <ImageView
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_power"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
-
+                        android:layout_below="@id/category4"
+                        android:text="Tiền điện nước"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
                 </RelativeLayout>
 
 
 
                 <RelativeLayout
-                    android:background="@drawable/shape_border_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                    android:layout_margin="20dp"
-                    android:id="@+id/category6"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp">
 
-                    <ImageView
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/ic_power"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"/>
+                    <RelativeLayout
+                        android:background="@drawable/shape_border_pink"
+
+                        android:layout_margin="20dp"
+                        android:id="@+id/category5"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp">
+
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_power"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/category5"
+                        android:text="Tiền nhà"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
 
                 </RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/shape_border_red"
+
+        android:layout_margin="20dp"
+        android:id="@+id/category6"
+        android:layout_width="55dp"
+        android:layout_height="55dp">
+
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_power"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/category6"
+        android:text="Tiền bảo hiểm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+
+
 
 
             </LinearLayout>
