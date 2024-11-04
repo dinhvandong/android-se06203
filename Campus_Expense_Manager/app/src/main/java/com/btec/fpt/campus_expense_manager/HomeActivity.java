@@ -1,5 +1,6 @@
 package com.btec.fpt.campus_expense_manager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
+    SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
+
+
+        String email = sharedPreferences.getString("email", null);
+        String password = sharedPreferences.getString("password", null); // Retrieve the hashed/encrypted version
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 

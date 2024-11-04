@@ -1,9 +1,12 @@
 package com.btec.fpt.campus_expense_manager.fragments;
 
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
@@ -33,6 +36,11 @@ public class LoginFragment extends Fragment {
         // Required empty public constructor
     }
 
+    // Initialize SharedPreferences
+    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserPrefs", MODE_PRIVATE);
+    SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
     View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,20 +60,17 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-           //     showAlertDialogExample();
-
-         //       showCustomToastMessage("Login Fail !!!!");
-
-    //            showMessage("Login successful !!!!");
-
-
-    //            Toast.makeText(getContext(), "Login successful!", Toast.LENGTH_LONG).show();
 
 
                 String email = edtEmail.getText().toString();
                 String pwd = edtPassword.getText().toString();
 
                 if(!email.isEmpty() && !pwd.isEmpty()){
+
+
+                    editor.putString("email", email);
+                    editor.putString("password", pwd);  // Store hashed/encrypted version instead
+                    editor.apply();  // or use commit() for synchronous saving
 
                     Intent intent = new Intent(getActivity(), HomeActivity.class);
                     startActivity(intent);
