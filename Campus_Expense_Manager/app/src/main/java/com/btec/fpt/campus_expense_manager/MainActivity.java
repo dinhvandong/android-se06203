@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.btec.fpt.campus_expense_manager.fragments.AddExpenseFragment;
 import com.btec.fpt.campus_expense_manager.fragments.ForgotPasswordFragment;
 import com.btec.fpt.campus_expense_manager.fragments.LoginFragment;
 import com.btec.fpt.campus_expense_manager.fragments.RegisterFragment;
@@ -28,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Show LoginFragment by default
-        loadFragment(new LoginFragment());
-
+        loadFragment(new AddExpenseFragment());
 
     }
 

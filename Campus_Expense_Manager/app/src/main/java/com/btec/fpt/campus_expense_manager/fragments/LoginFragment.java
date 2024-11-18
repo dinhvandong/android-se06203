@@ -37,8 +37,6 @@ public class LoginFragment extends Fragment {
     }
 
     // Initialize SharedPreferences
-    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserPrefs", MODE_PRIVATE);
-    SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
     View view;
@@ -46,11 +44,13 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          view = inflater.inflate(R.layout.fragment_login, container, false);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
         // Find buttons
         Button loginButton = view.findViewById(R.id.login_button);
         Button registerButton = view.findViewById(R.id.goto_register_button);
         Button forgotPasswordButton = view.findViewById(R.id.goto_forgot_password_button);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
         EditText edtEmail = view.findViewById(R.id.email);

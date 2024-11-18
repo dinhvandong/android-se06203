@@ -18,7 +18,6 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-    SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
 
 
         String email = sharedPreferences.getString("email", null);
