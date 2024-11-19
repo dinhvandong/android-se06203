@@ -44,7 +44,7 @@ public class AddExpenseFragment extends Fragment {
             public void onClick(View v) {
 
                 loadFragment(new DisplayExpenseFragment());
-                
+
 
             }
         });
@@ -68,6 +68,7 @@ public class AddExpenseFragment extends Fragment {
         double amount = Double.parseDouble(amountEditText.getText().toString());
         String description = descriptionEditText.getText().toString();
         String date = dateEditText.getText().toString();
+
 
         boolean inserted = dbHelper.insertExpense(amount, description, date);
         if (inserted) {

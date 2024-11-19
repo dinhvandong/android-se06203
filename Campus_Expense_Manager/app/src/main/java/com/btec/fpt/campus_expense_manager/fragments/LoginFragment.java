@@ -45,12 +45,12 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
          view = inflater.inflate(R.layout.fragment_login, container, false);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
         // Find buttons
         Button loginButton = view.findViewById(R.id.login_button);
         Button registerButton = view.findViewById(R.id.goto_register_button);
         Button forgotPasswordButton = view.findViewById(R.id.goto_forgot_password_button);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
         EditText edtEmail = view.findViewById(R.id.email);
@@ -67,7 +67,7 @@ public class LoginFragment extends Fragment {
 
                 if(!email.isEmpty() && !pwd.isEmpty()){
 
-
+                    // Luu mat khau va email
                     editor.putString("email", email);
                     editor.putString("password", pwd);  // Store hashed/encrypted version instead
                     editor.apply();  // or use commit() for synchronous saving
