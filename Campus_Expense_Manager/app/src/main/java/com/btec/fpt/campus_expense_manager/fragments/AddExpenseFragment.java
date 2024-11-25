@@ -70,14 +70,14 @@ public class AddExpenseFragment extends Fragment {
         String date = dateEditText.getText().toString();
 
 
-        boolean inserted = dbHelper.insertExpense(amount, description, date);
-        if (inserted) {
-            Toast.makeText(getContext(), "Expense added", Toast.LENGTH_SHORT).show();
-            amountEditText.setText("");
-            descriptionEditText.setText("");
-            dateEditText.setText("");
-        } else {
-            Toast.makeText(getContext(), "Error adding expense", Toast.LENGTH_SHORT).show();
-        }
+//        boolean inserted = dbHelper.insertExpense(amount, description, date);
+//        if (inserted) {
+//            Toast.makeText(getContext(), "Expense added", Toast.LENGTH_SHORT).show();
+//            amountEditText.setText("");
+//            descriptionEditText.setText("");
+//            dateEditText.setText("");
+//        } else {
+//            Toast.makeText(getContext(), "Error adding expense", Toast.LENGTH_SHORT).show();
+//        }
     }
 }

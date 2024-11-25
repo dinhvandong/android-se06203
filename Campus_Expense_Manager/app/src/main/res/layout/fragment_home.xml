@@ -29,13 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <TextView
-                android:layout_below="@id/tv_name"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:text="Hello Jane"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+
 
 
             <ImageView
@@ -53,19 +47,20 @@
             android:padding="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="120dp">
 
             <TextView
                 android:textStyle="italic"
                 android:textColor="@color/black"
-                android:textSize="40sp"
+                android:textSize="20sp"
                 android:text="VISA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:textColor="@color/black"
-                android:textSize="40sp"
+                android:textSize="20sp"
+                android:id="@+id/tvFullname"
                 android:text="DINH VAN DONG"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -73,7 +68,8 @@
             <TextView
                 android:textStyle="italic"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="20sp"
+                android:id="@+id/tvBalance"
                 android:text="1,200,000 VND"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
